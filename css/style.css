@@ -1,0 +1,54 @@
+/* Start of Global  Styling */
+html, body, *{
+    -webkit-box-sizing: border-box;  /*يستخدم لدعم المتصفحات القديمة*/
+    -moz-box-sizing: border-box; /*يستخدم لدعم المتصفحات القديمة*/
+    box-sizing: border-box; /*to make the website see the padding and the border in contain the box*/
+    padding: 0; /*لمتصفحات تضيف بشكل افتراضي حشوات (padding) وهوامش (margin) لبعض العناصر مثل body أو العناوين (h1، h2، إلخ).*/
+    margin: 0; /*إعادة ضبط القيم إلى 0 تضمن أن جميع العناصر تبدأ بدون أي مساحة إضافية غير مرغوب فيها*/
+}
+
+/* add Google font to the design */
+body {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Media Querry for the container*/
+/*Small*/
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+/*Medium*/
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+/*Large*/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+/* End of Global  Styling */
+
+
