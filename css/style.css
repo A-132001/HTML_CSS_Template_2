@@ -61,6 +61,49 @@ ul{
 }
 /* End of Global  Styling */
 
+/* Start Components */
+.main-heading{
+    text-align: center;
+    padding: 100px;
+}
+.main-heading h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    font-weight: normal;
+    position: relative;
+}
+.main-heading h2::after{
+    content: "";
+    border: 1px solid #333;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    border-radius: 7px;
+    background-color: white;
+}
+.main-heading h2::before{
+    content: "";
+    border-bottom: 1px solid #333;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+   
+}
+.main-heading p{
+    line-height: 2px;
+    width: 500px;
+    text-align: center;
+    max-width: 100%;
+    margin: 30px auto 100px;
+}
+/* End Components */
+
 /* Start of Header Styling */
 header {
     position: absolute;
