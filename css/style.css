@@ -320,10 +320,6 @@ header .container::after{
 /* End landing */
 
 /* Start Services */
-.services-container{
-    
-}
-
 .box-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -445,18 +441,26 @@ header .container::after{
 }
 /* End Design section  */
 /* Start Portfolio section */
+.protfolio-container{
+    position:relative;
+}
 .shuffle{
     display: flex;
     justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .shuffle li{
-    display: inline-block;
     padding: 10px;
-    cursor: pointer;
-    color: #777;
-    font-size: 20px;
-    border: solid 1px #777;
+}
+.shuffle .active{
+    background-color: var(--main-color);
+    color: white;
+}
+.shuffle li:hover{
+    background-color: var(--main-color);
+    color: white;
 }
 
 .images-container{
@@ -468,14 +472,150 @@ header .container::after{
 }
 .images-container .box{
     flex-basis: 25%;
+    position: relative;
+    overflow: hidden;
 }
-.images-container img{
+
+@media(max-width : 1199px){
+    .images-container .box{
+        flex-basis: 25%;
+    }
+}
+@media (max-width: 992px) {
+    .images-container .box{
+        flex-basis:50%;
+    }
+}
+@media(max-width : 767px){
+    .images-container .box{
+        flex-basis: 75%;
+        width: 100%;
+    }
+}
+
+.images-container .box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.5s;
+    transition: 0.3s;
+    
+}
+.images-container .box .caption{
+    position: absolute;
+    left: 0;
+    padding: 0 10px;
+    background-color: white;
+    width: 100%;
+    font-size: 12px;
+    bottom: -100%;
+    transition: 0.3s;
+}
+.images-container .box .caption h4{
+    font-weight:normal;
+    padding-bottom: 5px;
+}
+.images-container .box .caption p{
+    color: var(--main-color);
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.images-container .box:hover .caption{
+    bottom:0;
+}
+.images-container .box:hover img{
+    transform: rotate(3deg) scale(1.1);
+}
+
+.protfolio-container .more{
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.protfolio-container .more:hover{
+    width: 120px;
+}
+/* End Portfolio section */
+/* Start Video section */
+.video-section{
+    margin: 50px 0;
+    position: relative;
     
 }
 
+.video-section video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.video-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.video-section .text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    background-color: var(--transparent-color);
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    z-index: 2;
+    color: white;
+}
+.video-section .text h2{
+    padding-bottom: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
 
-/* End Portfolio section */
+.video-section .text p{
+    padding-bottom: 20px;
+    line-height: 1.5;
+}
+.video-section .text button{
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+
+/* End Video section */
+/* Start About Section */
+.about{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.about img{
+    position: relative;
+    width: 90%;
+    bottom: -40px;
+    margin-top: -150px;
+}
+@media (max-width: 767px){
+    .about img{
+       width: 70%;
+    }
+}
+
+/* End About Section */
