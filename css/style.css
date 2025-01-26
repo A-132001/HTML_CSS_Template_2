@@ -824,3 +824,14 @@ header .container::after{
 
 
 /*End Skills Section*/
+/* Start Pricing Section */
+.pricing{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.plans{
+    display: flex;
+    justify-content: space-between;
+}
+/* End Pricing Section */
+
