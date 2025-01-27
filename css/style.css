@@ -937,4 +937,92 @@ header .container::after{
     font-weight:bold;
 }
 /* End Pricing Section */
+/* Start Subscribe Section */
+.subscribe{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../images/work7.jpg");
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+.subscribe::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0px;
+    top: 0px;
+}
 
+.subscribe .container{
+    position: relative;
+    display: flex;
+}
+
+.subscribe .container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50%;
+
+}
+.subscribe .container form ::placeholder{
+    color: white;
+}
+.subscribe .container input[type="email"]{
+    height: 100%;
+    background: none;
+    border: 1px solid white;
+    border-right: none;
+    padding: 10px 30px;
+    color: white;
+    font-size: 18px;
+    width: calc(100% - 130px);
+    caret-color: var(--main-color);
+}
+
+.subscribe .container input[type="submit"]{
+    height: 100%;
+    width: 130px;
+    background-color: var(--main-color);
+    border: 1px solid white;
+    border-left: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;    
+}
+.subscribe .container input[type="email"]:focus,
+.subscribe .container input[type="submit"]:focus{
+    outline: none;
+}
+.subscribe .container i{
+    position: relative;
+    left: 6%;
+    transform: translateX(-50%);
+}
+.subscribe .container p{
+    margin-left:30px;
+    line-height: 2;
+}
+@media (max-width: 767px){
+    .subscribe .container{
+        flex-direction: column;
+    }
+    .subscribe .container form{
+        width: 100%;
+    } 
+    .subscribe .container i{
+        left: 8%;
+    }
+    .subscribe .container p{
+        margin-top:30px;
+        text-align: center;
+        
+    }
+}
+
+
+/* End Subscribe */
